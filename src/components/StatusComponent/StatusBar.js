@@ -7,7 +7,7 @@ const [showModel,setShowModel]=useState(false)
 const modelComponent=()=>{
 
      if(showModel===true){
-         return <InputForm/>
+         return <InputForm oncancel={()=>{setShowModel(false)}} onsubmit={()=>{setShowModel(false)}}/>
      }else{
           return null
      }
