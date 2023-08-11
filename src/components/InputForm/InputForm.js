@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../UI Component/Button/Button'
 
-export default function InputForm({oncancel, onsubmit}) {
+export default function InputForm({title,oncancel, onsubmit}) {
 
   const onSubmit=()=>{
     onsubmit()
@@ -13,7 +13,7 @@ export default function InputForm({oncancel, onsubmit}) {
       <div className='bg-white m-4 p-4
       rounded-lg md:w-7/12 w-10/12 max-w-screen-md shadow-2xl relative overflow-auto'>
         <a onClick={oncancel} className='absolute right-5 hover:cursor-pointer text-2xl'>X</a>
-        <h1 className='text-4xl  font-bold mb-4 text-center'>Add Product</h1>
+        <h1 className='text-4xl  font-bold mb-4 text-center'>{title}</h1>
         <div className='bg-orange-700 w-5/12s h-1 mx-auto mb-8 '></div>
         <form class="w-full max-w-lg">
   <div className="flex flex-wrap -mx-3 mb-6">

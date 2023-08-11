@@ -1,13 +1,14 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import InputForm from '../InputForm/InputForm'
 
 export default function StatusBar() {
 const [showModel,setShowModel]=useState(false)
 
+
 const modelComponent=()=>{
 
      if(showModel===true){
-         return <InputForm oncancel={()=>{setShowModel(false)}} onsubmit={()=>{setShowModel(false)}}/>
+         return <InputForm title={"Add Product"} oncancel={()=>{setShowModel(false)}} onsubmit={()=>{setShowModel(false)}}/>
      }else{
           return null
      }
